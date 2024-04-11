@@ -95,7 +95,7 @@ class PolylineRequest {
 
     //Add proxyUrl to the beginning of the URI
     if (proxyUrl != null) {
-      return Uri.parse(proxyUrl! + uri.toString());
+      return Uri.parse(proxyUrl! + Uri.encodeQueryComponent(uri.toString()));
     }
 
     return uri;
